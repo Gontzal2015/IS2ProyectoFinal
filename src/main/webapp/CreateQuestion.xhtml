@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<f:view>
+<h:head><title>Bienvenido a BetsJSF</title></h:head>
+<h:body>
+<p>Proyecto global Ingenieria del Software II</p>
+<p>Gontzal Leizabe</p>
+  <div >
+       
+        <h:form id="BForm">
+			<h3> Bienvenido a JavaServer Faces
+			
+			</h3>
+			<table>
+				<tr>
+					<td>
+						<p> Event Date </p>
+					</td>
+					<td>
+						<p> Events:<h:outputText id="fechaOutput" value="#{CreateQuestion.fecha}">
+						<f:convertDateTime pattern="yyyy-MM-dd"></f:convertDateTime></h:outputText> </p>
+					</td>
+				</tr>
+				<tr>
+					
+					<td>
+							<p:calendar id="calendario" value="#{CreateQuestion.fecha}" mode="inline">
+							<p:ajax event="dateSelect" listener="#{CreateQuestion.onDateSelect}" update="mensajes comboBoxEventos fechaOutput"></p:ajax>
+							</p:calendar>
+							
+
+					</td>
+					<td>
+							<h:selectOneMenu id="comboBoxEventos" value="#{CreateQuestion.eventoSel}" converter="omnifaces.SelectItemsConverter">
+							<f:selectItems value="#{CreateQuestion.listaEventos}"></f:selectItems>
+							<p:ajax event="change" listener="#{CreateQuestion.mostrarEvento}"></p:ajax>
+							</h:selectOneMenu>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p > Question:</p>
+					</td>
+					<td>
+						<h:inputText id="nuevaPregunta" value="#{CreateQuestion.newQuestion}"></h:inputText>
+					</td>
+					
+				</tr>
+				<tr>
+					<td>
+						<p>Min bet</p>
+					</td>
+					<td>
+						<h:inputText id="apuestaMinima" value="#{CreateQuestion.minBet}"></h:inputText>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h:commandButton id="CreateButton" value="Create question" action="#{CreateQuestion.addQuestion}"></h:commandButton>
+						<h:commandButton id="ReturnButton" value="Return" action="Return"/>
+					</td>
+				</tr>
+			</table>
+         <h:messages id="mensajes" style="color:blue"></h:messages>
+        </h:form>
+  </div>
+</h:body>
+</f:view>
+</html> 

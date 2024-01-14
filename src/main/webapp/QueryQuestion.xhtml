@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<f:view>
+<h:head><title>Bienvenido a BetsJSF</title></h:head>
+<h:body>
+<p>Proyecto global Ingenieria del Software II</p>
+<p>Gontzal Leizabe</p>
+  <div >
+       
+        <h:form id="BForm">
+			<h3> Bienvenido a JavaServer Faces,
+			</h3>
+			<table>
+				<tr>
+					<td>
+							<p:calendar id="calendario" value="#{QueryQuestion.fecha}" mode="inline">
+							<p:ajax event="dateSelect" listener="#{QueryQuestion.onDateSelect}" update="mensajes tablaEventos"></p:ajax>
+							</p:calendar>
+					</td>
+					<td>
+						<p:dataTable id="tablaEventos" value="#{QueryQuestion.listaEventos}" var="item" selection="#{QueryQuestion.eventSel}" selectionMode="single"
+						border="1" rowKey="#{item.eventNumber}">
+							<p:ajax event="rowSelect" listener="#{QueryQuestion.onEventSelect}" update=":BForm:tablaPreguntas"></p:ajax>
+							<f:facet name="header">Bets</f:facet>
+							<p:column headerText="Event">#{item.description}</p:column>
+						</p:dataTable>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p:dataTable id="tablaPreguntas" value="#{QueryQuestion.listaPreguntas}" var="item" selection="#{QueryQuestion.preguntaSel}" selectionMode="single"
+						border="1" rowKey="#{item.questionNumber}">
+						
+							<f:facet name="header">Bets</f:facet>
+							<p:column headerText="N">#{item.questionNumber}</p:column>
+							<p:column headerText="Event">#{item.question}</p:column>
+						</p:dataTable>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h:commandButton id="ReturnButton" value="Return" action="Return"/>
+					</td>
+				</tr>
+				
+           	</table>
+            <h:messages id="mensajes" style="color:blue"></h:messages>
+         
+        </h:form>
+  </div>
+</h:body>
+</f:view>
+</html> 
