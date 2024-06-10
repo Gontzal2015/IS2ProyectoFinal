@@ -1,162 +1,268 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-<modelVersion>4.0.0</modelVersion>
-<groupId>BetsJSF</groupId>
-<artifactId>IS2ProyectoFinal</artifactId>
-<version>0.0.1-SNAPSHOT</version>
-<build>
-<plugins>
-<plugin>
-<groupId>org.apache.maven.plugins</groupId>
-<artifactId>maven-compiler-plugin</artifactId>
-<configuration>
-<source>1.8</source>
-<target>1.8</target>
-</configuration>
-</plugin>
-<plugin>
-<groupId>org.apache.maven.plugins</groupId>
-<artifactId>maven-surefire-plugin</artifactId>
-<version>2.19.1</version>
-<configuration>
-<testFailureIgnore>true</testFailureIgnore>
-</configuration>
-</plugin>
-<plugin>
-<groupId>org.jacoco</groupId>
-<artifactId>jacoco-maven-plugin</artifactId>
-<version>0.8.8</version>
-<executions>
-<execution>
-<id>prepare-agent</id>
-<goals>
-<goal>prepare-agent</goal>
-</goals>
-</execution>
-<execution>
-<id>report</id>
-<goals>
-<goal>report</goal>
-</goals>
-</execution>
-</executions>
-</plugin>
-</plugins>
-</build>
-<repositories>
-<repository>
-<id>objectdb</id>
-<name>ObjectDB Repository</name>
-<url>https://m2.objectdb.com</url>
-</repository>
-<repository>
-<id>prime-repo</id>
-<name>PrimeFaces Maven Repository</name>
-<url>http://repository.primefaces.org</url>
-<layout>default</layout>
-</repository>
-</repositories>
-<properties>
-<project.build.sourceEncoding> ISO-8859-1 </project.build.sourceEncoding>
-<maven.compiler.source>1.8</maven.compiler.source>
-<sonar.organization>Gontzal2015</sonar.organization>
-<sonar.host.url>https://sonarcloud.io</sonar.host.url>
-<sonar.projectKey>IS2ProyectoFinal</sonar.projectKey>
-<sonar.login>7c78e15752903c55a6c11cfdea277394ff8f81dc</sonar.login>
-<maven.compiler.target>11</maven.compiler.target>
-<maven.compiler.source>11</maven.compiler.source>
-</properties>
-<!--  https://mvnrepository.com/artifact/junit/junit  -->
-<dependencies>
-<dependency>
-<groupId>junit</groupId>
-<artifactId>junit</artifactId>
-<version>4.13.2</version>
-<scope>test</scope>
-</dependency>
-<dependency>
-<groupId>com.toedter</groupId>
-<artifactId>jcalendar</artifactId>
-<version>1.4</version>
-</dependency>
-<!--  API JAXB  -->
-<dependency>
-<groupId>jakarta.xml.bind</groupId>
-<artifactId>jakarta.xml.bind-api</artifactId>
-<version>2.3.2</version>
-</dependency>
-<!--  Runtime  -->
-<dependency>
-<groupId>org.glassfish.jaxb</groupId>
-<artifactId>jaxb-runtime</artifactId>
-<version>2.3.2</version>
-</dependency>
-<!--  API JAX-WS  -->
-<dependency>
-<groupId>jakarta.xml.ws</groupId>
-<artifactId>jakarta.xml.ws-api</artifactId>
-<version>2.3.2</version>
-</dependency>
-<!--  Runtime  -->
-<dependency>
-<groupId>com.sun.xml.ws</groupId>
-<artifactId>jaxws-rt</artifactId>
-<version>2.3.5</version>
-</dependency>
-<dependency>
-<groupId>com.objectdb</groupId>
-<artifactId>objectdb</artifactId>
-<version>2.8.1</version>
-</dependency>
-<dependency>
-<groupId>org.eclipse.persistence</groupId>
-<artifactId>javax.persistence</artifactId>
-<version>2.1.0</version>
-</dependency>
-<dependency>
-<groupId>javax.transaction</groupId>
-<artifactId>jta</artifactId>
-<version>1.1</version>
-</dependency>
-<!--  https://mvnrepository.com/artifact/net.bytebuddy/byte-buddy-agent  -->
-<dependency>
-<groupId>net.bytebuddy</groupId>
-<artifactId>byte-buddy-agent</artifactId>
-<version>1.10.10</version>
-<scope>test</scope>
-</dependency>
-<!--  https://mvnrepository.com/artifact/net.bytebuddy/byte-buddy  -->
-<dependency>
-<groupId>net.bytebuddy</groupId>
-<artifactId>byte-buddy</artifactId>
-<version>1.10.10</version>
-</dependency>
-<!--  https://mvnrepository.com/artifact/org.objenesis/objenesis-tck  -->
-<dependency>
-<groupId>org.objenesis</groupId>
-<artifactId>objenesis-tck</artifactId>
-<version>3.0.1</version>
-</dependency>
-<!--  https://mvnrepository.com/artifact/org.mockito/mockito-all  -->
-<dependency>
-<groupId>org.mockito</groupId>
-<artifactId>mockito-core</artifactId>
-<version>3.0.0</version>
-<scope>test</scope>
-</dependency>
-<dependency>
-<groupId>org.hibernate</groupId>
-<artifactId>hibernate-core</artifactId>
-<version>5.0.7.Final</version>
-</dependency>
-<dependency>
-<groupId>org.primefaces</groupId>
-<artifactId>primefaces</artifactId>
-<version>5.2</version>
-</dependency>
-<dependency>
-<groupId>org.glassfish</groupId>
-<artifactId>javax.faces</artifactId>
-<version>2.3.0</version>
-</dependency>
-</dependencies>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>BetsJSF</groupId>
+  <artifactId>BetsJSF</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  <dependencies>
+    <dependency>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-annotations-api</artifactId>
+      <version>9.0.83</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-catalina-ant</artifactId>
+      <version>9.0.83</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-catalina-ha</artifactId>
+      <version>9.0.83</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-ssi</artifactId>
+      <version>9.0.83</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-storeconfig</artifactId>
+      <version>9.0.83</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-tribes</artifactId>
+      <version>9.0.83</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-catalina</artifactId>
+      <version>9.0.83</version>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.jdt</groupId>
+      <artifactId>ecj</artifactId>
+      <version>3.26.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-el-api</artifactId>
+      <version>9.0.83</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-jasper-el</artifactId>
+      <version>9.0.83</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-jasper</artifactId>
+      <version>9.0.83</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-jaspic-api</artifactId>
+      <version>9.0.83</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-jsp-api</artifactId>
+      <version>9.0.83</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-servlet-api</artifactId>
+      <version>9.0.83</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-api</artifactId>
+      <version>9.0.83</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-coyote</artifactId>
+      <version>9.0.83</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-dbcp</artifactId>
+      <version>9.0.83</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-i18n-cs</artifactId>
+      <version>9.0.83</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-i18n-de</artifactId>
+      <version>9.0.83</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-i18n-es</artifactId>
+      <version>9.0.83</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-i18n-fr</artifactId>
+      <version>9.0.83</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-i18n-ja</artifactId>
+      <version>9.0.83</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-i18n-ko</artifactId>
+      <version>9.0.83</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-i18n-pt-BR</artifactId>
+      <version>9.0.83</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-i18n-ru</artifactId>
+      <version>9.0.83</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-i18n-zh-CN</artifactId>
+      <version>9.0.83</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-jdbc</artifactId>
+      <version>9.0.83</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-jni</artifactId>
+      <version>9.0.83</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-util-scan</artifactId>
+      <version>9.0.83</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-util</artifactId>
+      <version>9.0.83</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-websocket</artifactId>
+      <version>9.0.83</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-websocket-api</artifactId>
+      <version>9.0.83</version>
+    </dependency>
+    <dependency>
+      <groupId>org.glassfish</groupId>
+      <artifactId>javax.faces</artifactId>
+      <version>2.0.11</version>
+    </dependency>
+    <dependency>
+      <groupId>maven2.jstl</groupId>
+      <artifactId>jstl</artifactId>
+      <version>1.2</version>
+    </dependency>
+    <dependency>
+      <groupId>maven2.antlr</groupId>
+      <artifactId>antlr</artifactId>
+      <version>2.7.6</version>
+    </dependency>
+    <dependency>
+      <groupId>maven2.commons-collections</groupId>
+      <artifactId>commons-collections</artifactId>
+      <version>3.1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.hibernate.javax.persistence</groupId>
+      <artifactId>hibernate-jpa-2.0-api</artifactId>
+      <version>1.0.0.Final</version>
+    </dependency>
+    <dependency>
+      <groupId>org.javassist</groupId>
+      <artifactId>javassist</artifactId>
+      <version>3.26.0-GA</version>
+    </dependency>
+    <dependency>
+      <groupId>org.jboss.javaee</groupId>
+      <artifactId>jboss-transaction-api</artifactId>
+      <version>1.0.1.GA</version>
+    </dependency>
+    <dependency>
+      <groupId>maven2.log4j</groupId>
+      <artifactId>log4j</artifactId>
+      <version>1.2.14</version>
+    </dependency>
+    <dependency>
+      <groupId>org.mariadb.jdbc</groupId>
+      <artifactId>mariadb-java-client</artifactId>
+      <version>3.1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>1.6.1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-nop</artifactId>
+      <version>1.6.2</version>
+    </dependency>
+    <dependency>
+      <groupId>org.omnifaces</groupId>
+      <artifactId>omnifaces</artifactId>
+      <version>1.8.1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.primefaces</groupId>
+      <artifactId>primefaces</artifactId>
+      <version>4.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.orbit.bundles</groupId>
+      <artifactId>org.junit</artifactId>
+      <version>4.13.0-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.orbit.bundles</groupId>
+      <artifactId>org.hamcrest.core</artifactId>
+      <version>1.3.0-SNAPSHOT</version>
+    </dependency>
+  </dependencies>
+  <build>
+    <resources>
+      <resource>
+        <directory>src/main/java</directory>
+        <excludes>
+          <exclude>**/*.java</exclude>
+        </excludes>
+      </resource>
+    </resources>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.1</version>
+        <configuration>
+          <source>1.6</source>
+          <target>1.6</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.2.3</version>
+      </plugin>
+    </plugins>
+  </build>
 </project>
