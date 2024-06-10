@@ -27,6 +27,7 @@
 						border="1" rowKey="#{item.eventNumber}">
 							<p:ajax event="rowSelect" listener="#{QueryQuestion.onEventSelect}" update=":BForm:tablaPreguntas"></p:ajax>
 							<f:facet name="header">Bets</f:facet>
+							<p:column headerText="N">#{item.eventNumber}</p:column>
 							<p:column headerText="Event">#{item.description}</p:column>
 						</p:dataTable>
 					</td>
@@ -38,7 +39,7 @@
 						
 							<f:facet name="header">Bets</f:facet>
 							<p:column headerText="N">#{item.questionNumber}</p:column>
-							<p:column headerText="Event">#{item.question}</p:column>
+							<p:column headerText="Question">#{item.question}</p:column>
 						</p:dataTable>
 					</td>
 				</tr>

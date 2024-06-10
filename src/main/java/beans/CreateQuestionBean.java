@@ -44,15 +44,18 @@ public class CreateQuestionBean {
 	public void addQuestion() {
 		try {
 			if(eventoSel==null) {
-				FacesContext.getCurrentInstance().addMessage(null,new FacesMessage("Elige un evento"));
+				FacesContext.getCurrentInstance().addMessage(null,new FacesMessage("Choose an event"));
 			}
 			else if(newQuestion.isEmpty()) {
-				FacesContext.getCurrentInstance().addMessage(null,new FacesMessage("Tienes que escribir una pregunta"));
+				FacesContext.getCurrentInstance().addMessage(null,new FacesMessage("You have to write a question"));
 			}
 			else if(minBet==null||minBet<=0.0) {
-				FacesContext.getCurrentInstance().addMessage(null,new FacesMessage("El importe minimo debe ser mas de 0"));
+				FacesContext.getCurrentInstance().addMessage(null,new FacesMessage("The minimun bet must be greater than 0"));
 			}
-			else BLFacadeImplementation.getBlFacade().createQuestion(getEventoSel(),this.getNewQuestion(),this.getMinBet());
+			else{
+				BLFacadeImplementation.getBlFacade().createQuestion(getEventoSel(),this.getNewQuestion(),this.getMinBet());
+				FacesContext.getCurrentInstance().addMessage(null,new FacesMessage("The question has been successfully created"));
+			}
 		} catch (EventFinished e) {
 			System.out.println("El evento ya ha terminado.");
 			e.printStackTrace();
@@ -63,7 +66,7 @@ public class CreateQuestionBean {
 	}
 	public void onDateSelect(SelectEvent event) {
 		 FacesContext.getCurrentInstance().addMessage(null,
-		 new FacesMessage("Fecha escogida: "+event.getObject()));
+		 new FacesMessage("Choosen date: "+event.getObject()));
 		 setFecha((Date)event.getObject());
 		 getEventList((Date)event.getObject());
 		} 

@@ -1,0 +1,7 @@
+/beans/
+/businessLogic/
+/configuration/
+/dataAccess/
+/domain/
+/exceptions/
+/hibernate.cfg.xml
