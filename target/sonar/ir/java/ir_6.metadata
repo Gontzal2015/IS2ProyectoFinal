@@ -1,0 +1,14 @@
+dataAccess.DataAccess#existQuestion(Ldomain/Event;Ljava/lang/String;)Z
+configuration.HibernateUtil#getSessionFactory()Lorg/hibernate/SessionFactory;
+==
+createQuery org.hibernate.SharedSessionContract#createQuery(Ljava/lang/String;)Lorg/hibernate/Query;
+setParameter org.hibernate.Query#setParameter(Ljava/lang/String;Ljava/lang/Object;)Lorg/hibernate/Query;
+getCurrentSession org.hibernate.SessionFactory#getCurrentSession()Lorg/hibernate/Session;
+println java.io.PrintStream#println(Ljava/lang/String;)V
+getTransaction org.hibernate.SharedSessionContract#getTransaction()Lorg/hibernate/Transaction;
+commit org.hibernate.Transaction#commit()V
+DoesQuestionExists domain.Event#DoesQuestionExists(Ljava/lang/String;)Z
+get java.util.List#get(I)Ljava/lang/Object;
+beginTransaction org.hibernate.SharedSessionContract#beginTransaction()Lorg/hibernate/Transaction;
+getEventNumber domain.Event#getEventNumber()Ljava/lang/Integer;
+list org.hibernate.Query#list()Ljava/util/List;

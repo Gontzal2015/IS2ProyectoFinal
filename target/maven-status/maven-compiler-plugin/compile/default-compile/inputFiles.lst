@@ -1,0 +1,13 @@
+D:\UNIVERSIDAD\TERCERO\SI\WorkspaceProyectoJon\BetsJSF\src\main\java\businessLogic\BLFacadeImplementation.java
+D:\UNIVERSIDAD\TERCERO\SI\WorkspaceProyectoJon\BetsJSF\src\main\java\configuration\UtilDate.java
+D:\UNIVERSIDAD\TERCERO\SI\WorkspaceProyectoJon\BetsJSF\src\main\java\beans\BienvenidaBean.java
+D:\UNIVERSIDAD\TERCERO\SI\WorkspaceProyectoJon\BetsJSF\src\main\java\exceptions\QuestionAlreadyExist.java
+D:\UNIVERSIDAD\TERCERO\SI\WorkspaceProyectoJon\BetsJSF\src\main\java\configuration\HibernateUtil.java
+D:\UNIVERSIDAD\TERCERO\SI\WorkspaceProyectoJon\BetsJSF\src\main\java\dataAccess\DataAccess.java
+D:\UNIVERSIDAD\TERCERO\SI\WorkspaceProyectoJon\BetsJSF\src\main\java\domain\Question.java
+D:\UNIVERSIDAD\TERCERO\SI\WorkspaceProyectoJon\BetsJSF\src\main\java\domain\Event.java
+D:\UNIVERSIDAD\TERCERO\SI\WorkspaceProyectoJon\BetsJSF\src\main\java\beans\QueryQuestionBean.java
+D:\UNIVERSIDAD\TERCERO\SI\WorkspaceProyectoJon\BetsJSF\src\main\java\beans\CreateQuestionBean.java
+D:\UNIVERSIDAD\TERCERO\SI\WorkspaceProyectoJon\BetsJSF\src\main\java\dataAccess\DataAccessInterface.java
+D:\UNIVERSIDAD\TERCERO\SI\WorkspaceProyectoJon\BetsJSF\src\main\java\exceptions\EventFinished.java
+D:\UNIVERSIDAD\TERCERO\SI\WorkspaceProyectoJon\BetsJSF\src\main\java\businessLogic\BLFacade.java

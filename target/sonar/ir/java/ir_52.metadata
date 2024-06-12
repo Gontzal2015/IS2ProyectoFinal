@@ -1,0 +1,1 @@
+configuration.HibernateUtil#getSessionFactory()Lorg/hibernate/SessionFactory;

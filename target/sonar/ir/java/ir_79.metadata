@@ -1,0 +1,5 @@
+beans.QueryQuestionBean#getEventList()V
+businessLogic.BLFacadeImplementation#getBlFacade()LbusinessLogic/BLFacadeImplementation;
+==
+setListaEventos beans.QueryQuestionBean#setListaEventos(Ljava/util/List;)V
+getEvents businessLogic.BLFacadeImplementation#getEvents(Ljava/util/Date;)Ljava/util/List;

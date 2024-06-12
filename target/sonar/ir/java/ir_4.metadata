@@ -1,0 +1,14 @@
+dataAccess.DataAccess#getEvents()Ljava/util/List;
+java.util.ArrayList#<init>()V
+java.util.ArrayList#instance-init#
+configuration.HibernateUtil#getSessionFactory()Lorg/hibernate/SessionFactory;
+==
+createQuery org.hibernate.SharedSessionContract#createQuery(Ljava/lang/String;)Lorg/hibernate/Query;
+getCurrentSession org.hibernate.SessionFactory#getCurrentSession()Lorg/hibernate/Session;
+toString domain.Event#toString()Ljava/lang/String;
+println java.io.PrintStream#println(Ljava/lang/String;)V
+add java.util.List#add(Ljava/lang/Object;)Z
+getTransaction org.hibernate.SharedSessionContract#getTransaction()Lorg/hibernate/Transaction;
+commit org.hibernate.Transaction#commit()V
+beginTransaction org.hibernate.SharedSessionContract#beginTransaction()Lorg/hibernate/Transaction;
+list org.hibernate.Query#list()Ljava/util/List;

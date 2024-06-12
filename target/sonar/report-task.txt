@@ -1,0 +1,7 @@
+organization=gontzal2015
+projectKey=IS2ProyectoFinal
+serverUrl=https://sonarcloud.io
+serverVersion=8.0.0.55070
+dashboardUrl=https://sonarcloud.io/dashboard?id=IS2ProyectoFinal
+ceTaskId=AZAL7Woz5JHg_Sa3cNS5
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AZAL7Woz5JHg_Sa3cNS5

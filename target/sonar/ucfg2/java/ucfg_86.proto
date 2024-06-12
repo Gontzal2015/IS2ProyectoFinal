@@ -1,0 +1,34 @@
+
+VbusinessLogic.BLFacadeImplementation#getEventQuestions(Ldomain/Event;)Ljava/util/List;x
+nD:/UNIVERSIDAD/TERCERO/SI/WorkspaceProyectoJon/BetsJSF/src/main/java/businessLogic/BLFacadeImplementation.javam m(("1*√
+1n n(%é
+ã
+n n(%$
+%0dataAccess.DataAccessInterface"__id*S
+
+__unknown_file (7*5&
+$businessLogic.BLFacadeImplementation"
+	dbManageríè
+n n(?
+%1java.util.List"PdataAccess.DataAccessInterface#getEventQuestions(Ldomain/Event;)Ljava/util/List;*B
+
+__unknown_file (&
+$
+%0dataAccess.DataAccessInterface*4
+
+__unknown_file (
+
+eventodomain.Event2!getEventQuestions(Ldomain/Event;)c
+a
+n n(@
+	preguntasjava.util.List"__id*2
+
+__unknown_file (
+
+%1java.util.List")
+o o(
+
+	preguntasjava.util.List:"
+m) m(5
+eventodomain.EventB(&
+$businessLogic.BLFacadeImplementationH

@@ -1,0 +1,6 @@
+beans.CreateQuestionBean#<init>()V
+businessLogic.BLFacadeImplementation#getBlFacade()LbusinessLogic/BLFacadeImplementation;
+java.util.Date#<init>()V
+java.util.Date#instance-init#
+==
+getEvents businessLogic.BLFacadeImplementation#getEvents(Ljava/util/Date;)Ljava/util/List;

@@ -1,0 +1,80 @@
+
+XbusinessLogic.BLFacadeImplementation#getBlFacade()LbusinessLogic/BLFacadeImplementation;x
+nD:/UNIVERSIDAD/TERCERO/SI/WorkspaceProyectoJon/BetsJSF/src/main/java/businessLogic/BLFacadeImplementation.java& (1"3*ë
+2 (#@>
+ (!
+%2dataAccess.DataAccess"dataAccess.DataAccessn
+l
+ (#
+%3"dataAccess.DataAccess#<init>()V*9
+
+__unknown_file (
+
+%2dataAccess.DataAccessj
+h
+ ($
+bddataAccess.DataAccess"__id*9
+
+__unknown_file (
+
+%2dataAccess.DataAccess^\
+ ((*
+%4$businessLogic.BLFacadeImplementation"$businessLogic.BLFacadeImplementationË
+Â
+ (,
+%5"NbusinessLogic.BLFacadeImplementation#<init>(LdataAccess/DataAccessInterface;)V*H
+
+__unknown_file (,
+*
+%4$businessLogic.BLFacadeImplementation*9
+
+__unknown_file (
+
+bddataAccess.DataAccessì
+ê
+ (,4&
+$businessLogic.BLFacadeImplementation"
+
+blFacade"__id*H
+
+__unknown_file (,
+*
+%4$businessLogic.BLFacadeImplementation*
+1*Á
+3 (ì
+ê
+ (*
+%0$businessLogic.BLFacadeImplementation"__id*R
+
+__unknown_file (6*4&
+$businessLogic.BLFacadeImplementation"
+
+blFacadeπ
+∂
+ (
+%1boolean"	__compare*"
+
+__unknown_file (
+==*H
+
+__unknown_file (,
+*
+%0$businessLogic.BLFacadeImplementation*"
+
+__unknown_file (
+""*
+2
+1*›
+1	 (ì
+ê
+	 (*
+%6$businessLogic.BLFacadeImplementation"__id*R
+
+__unknown_file (6*4&
+$businessLogic.BLFacadeImplementation"
+
+blFacade"8
+ (,
+*
+%6$businessLogic.BLFacadeImplementationB("&
+$businessLogic.BLFacadeImplementationH

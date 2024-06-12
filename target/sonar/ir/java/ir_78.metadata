@@ -1,0 +1,5 @@
+beans.QueryQuestionBean#getQuestionList()V
+businessLogic.BLFacadeImplementation#getBlFacade()LbusinessLogic/BLFacadeImplementation;
+==
+setListaPreguntas beans.QueryQuestionBean#setListaPreguntas(Ljava/util/List;)V
+getEventQuestions businessLogic.BLFacadeImplementation#getEventQuestions(Ldomain/Event;)Ljava/util/List;

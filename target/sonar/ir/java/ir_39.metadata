@@ -1,0 +1,5 @@
+beans.CreateQuestionBean#mostrarEvento()V
+==
+toString domain.Event#toString()Ljava/lang/String;
+println java.io.PrintStream#println(Ljava/lang/String;)V
+getEventDate domain.Event#getEventDate()Ljava/util/Date;
