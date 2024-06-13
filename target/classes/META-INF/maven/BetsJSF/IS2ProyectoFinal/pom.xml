@@ -63,7 +63,6 @@
 		<sonar.organization>gontzal2015</sonar.organization>
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 		<sonar.projectKey>IS2ProyectoFinal</sonar.projectKey>
-		<sonar.login>d5fd849d518fa66f817330246e85e9f79195611e</sonar.login>
 		<maven.compiler.target>11</maven.compiler.target>
 		<maven.compiler.source>11</maven.compiler.source>
 	</properties>
