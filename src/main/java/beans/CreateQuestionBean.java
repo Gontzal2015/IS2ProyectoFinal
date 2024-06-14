@@ -63,7 +63,7 @@ public class CreateQuestionBean {
     }
 
     public void mostrarEvento() {
-        logger.log(Level.INFO, "Evento seleccionado::::::::::::::::::{0} {1}", new Object[]{eventoSel.toString(), eventoSel.getEventDate()});
+        logger.log(Level.INFO, "Evento seleccionado::::::::::::::::::{0} {1}", new Object[]{eventoSel, eventoSel.getEventDate()});
     }
 
     public List<Event> getListaEventos() {
