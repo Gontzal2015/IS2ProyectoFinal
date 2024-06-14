@@ -26,7 +26,6 @@ public class QueryQuestionBean {
 	public void onDateSelect(SelectEvent event) {
 		 FacesContext.getCurrentInstance().addMessage(null,
 		 new FacesMessage("Choosen date: "+event.getObject()));
-//		 setFecha((Date)event.getObject());
 		 getEventList();
 		}
 	
